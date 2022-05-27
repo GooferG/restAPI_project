@@ -11,3 +11,10 @@ generator client {
   provider = "prisma-client-js"
 }
 
+model trip {
+	id Int @id @default(autoincrement())
+	user Int
+	name String
+	start_date DateTime @default(now())
+	end_date DateTime?
+}
